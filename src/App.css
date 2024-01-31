@@ -1,38 +1,575 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: rgb(251, 245, 237);
+}
+nav{
+  align-items: center;
+  max-width: 100%;
+  height: 5rem;
+  padding: 0 7%;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+}
+nav .nav-center{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .nav-center .links {
+  display: flex;
+  list-style: none;
+  margin-top: 1.6rem;
+}
+nav .nav-center .links li{
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+}
+nav .nav-center .links li a{
+  color: green;
+  text-decoration: none;
+}
+nav .nav-center .links li a:hover, .active{
+    border-bottom: 2px solid darkorange;
+    border-left: 2px solid darkorange;
+    border-radius: 3px;
+}
+nav .logo h2{
+  font-weight: 800;
+  margin-top: 1.5rem;
+  font-size: larger;
+  color: green;
+}
+.menubar{
+  /* visibility: hidden; */
+  display: none;
+}
+.logo h2 span{
+  color: orangered;
+}
+.search-form{
+  width: 80%;
+  margin: auto;
+  background-color: rgb(245, 245, 245);
+  padding: 30px;
+  margin-top: 5%;
+  border-radius: 10px;
+  box-shadow:2px 5px 3px 0px rgba(0, 0, 0, 0.5) ;
+}
+.search-form .form-control label{
+  /* font-weight: small; */
+  display: block;
+  font-size: bold;
+  letter-spacing: 0.09rem;
+  color: darkorange;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 900px) {
+  .search-form{
+    width: 50%;
+    margin-top: 4%;
+  }
+  .search-form .form-control label{
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-form .form-control span{
+  color: green;
+}
+.search-form .form-control input{
+    display: block;
+    width: 100%;
+    padding: 6px;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+.section{
+  padding: 5rem ;
+}
+.no-cocktail{
+  margin-top: 5%;
+  color: #476a2e;
+  margin-bottom: 10%;
+  text-align: center;
+}
+.main{
+  padding: 5% 7%;
+}
+.main .heading{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+}
+.main .heading h3{
+  margin-bottom: 5px;
+}
+.main .heading h3::after{
+  content: '';
+    background: #476a2e;
+    position: absolute;
+    bottom: -7px;
+    display: block;
+    height: 5px;
+    width: 80px;
+    border-radius: 5px;
+}
+.main .contents{
+  margin-top: 4%;
+}
+.main .contents .contents-center{
+  display: flex;
+  justify-content: space-between;
+}
+.main .contents .abt, li{
+  margin-bottom: 2%;
+  font-weight: 400;
+  list-style: none;
+}
+.main .contents h4{
+  margin: 0.5% 0;
+  color: darkorange;
+}
+.main .contents .abt-sct{
+  margin-bottom: 5%;
+}
+
+.main .contents .contents-center > div{
+  display: flex;
+  align-items: center;
+   width: 50%;
+   font-size: large;
+}
+.main .contents .contents-center .texts{
+  padding: 0 5%;
+}
+.main .contents .contents-center .texts p{
+  margin: 3% 0;
+}
+
+.contents-center .training-form{
+  display: flex;
+  align-items: center;
+}
+.main .about-image img{
+  /* height: auto; */
+  height: 25rem;
+  width: 95%;
+  margin: auto;
+  border-radius: 5px;
+}
+.li ol{
+   list-style: none;
+}
+.contents-center form{
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+}
+.contents-center form input, select{
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contents-center form label{
+  color: darkorange;
+  font-size: large;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.submit input {
+  background: darkorange;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+.form-center {
+  margin-bottom: 1%;
+}
+.main .title{
+  margin-bottom: 2rem ;
+  text-align: center;
+
+}
+.cocktail-list{
+  width:  85vw;
+  margin: 0 auto;
+  max-width: 100%;
+  font-size: larger;
+}
+.cocktail-list article img{
+  height: 20rem;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.cocktail-list article{
+  align-content: center;
+  box-shadow:2px 5px 3px 0px rgba(0, 0, 0, 0.5) ;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: whitesmoke;
+  margin-bottom: 3rem;
+}
+.cocktail-list article .description{
+  padding: 3%;
+}
+.section{
+  padding: 5rem 0;
+}
+article .description .sub{
+  margin-bottom: 10px;
+  display: flex;
+}
+
+article .description .sub p{
+  padding: 4px;
+  font-weight: 600;
+}
+article .description h2{
+  margin-bottom: 4px;
+}
+article .description .sub p:first-child{
+  background-color: darkorange;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: white;
+}
+.cocktail-list article .description button{
+  border-color: #476a2e; 
+  color: white;
+  background-color: #476a2e;
+  border-radius: 5px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: white;
+  padding: 3px 4px;
+  cursor: pointer;
+}
+
+.cocktail-list article .description button:hover{
+  color: white;
+  background-color:#476a2e;
+  border-color: aliceblue;
+}
+
+.single{
+  display: block;
+  box-shadow:2px 5px 3px 0px rgba(0, 0, 0, 0.5) ;
+  width: fit-content;
+  margin: auto;
+  background-color: whitesmoke;
+  padding: 1rem 3rem;
+  margin-top: 5%;
+}
+
+.single h3{
+ text-align: center;
+ margin-bottom: 0.5rem;
+}
+
+main .single-center{
+  width: 60vw;
+  margin: auto; 
+}
+
+.single .home-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.single .home-btn button{
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: white;
+  background-color: #476a2e;
+  cursor: pointer;
+}
+
+main .single-center .image img{
+   height: 20rem;
+   border-radius: 10px;
+}
+
+main .single-center .sub span:first-child{
+  background-color: darkorange;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 4px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+main .single-center .sub{
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 900px) {
+  .cocktail-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    display: grid;
+    row-gap: 2rem;
+    column-gap: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (min-width: 992px) {
+  .single-center {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 3rem;
+    grid-template-rows: 1fr ;
+    align-items: center;
+  }
+  .drink-info {
+    padding-top: 0;
+  }
+}
+.cancel{
+  color: red;
+}
+
+
+/* SideBar */
+.sidebar{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0rem;
+  visibility: hidden;
+}
+
+.sidebar-center{
+  width: 80vw;
+  height: 100%;
+  padding: 5%;
+  background: transparent;
+  background-color: whitesmoke;
+}
+.show{
+  visibility: visible;
+}
+.sidebar .head{
+  display: flex;
+  justify-content: space-between;
+}
+.cancel{
+  color: hsl(360, 67%, 44%);
+  font-size: 1.75rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  margin-top: 0.2rem;
+}
+.show .nav{
+  margin-top: 10%;
+}
+.show .nav li{
+  list-style-type: none;
+  margin-bottom: 7%;
+}
+.nav li a{
+  text-decoration: none;
+  color: #476a2e;
+  font-size: larger;
+  font-weight: 750;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btt button{
+  visibility: hidden;
+}
+.show button{
+  position: fixed;
+  top: 80vh;
+  right: 8%;
+  visibility: visible;
+  z-index: 2;
+  background-color: darkorange;
+  color: white;
+  font-size: 20px;
+  font-weight:bolder;
+  width: 50px;
+  height: 50px;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+/* Footer  */
+.footer{
+   width: 100%;
+   padding: 2% 7%;
+   position: relative;
+   background-color: #476a2e;
+   color: white;
+   
+}
+.footer>div{
+  display: flex;
+  justify-content: space-between;
+}
+.footer>div>div{
+  width: 23%;
+
+}
+.footer h3{
+  margin-bottom: 5px;
+}
+.footer ul li{
+  cursor: pointer;
+  font-size: large;
+}
+.footer ul li a{
+  color: white;
+  text-decoration: none;
+  
+}
+.footer ul li .active{
+  border: none;
+  text-decoration: none;
+  border-left: 3px solid darkorange;
+  border-radius: none;
+  padding-left: 3px;
+}
+.footer ul li span :first-child{
+  color: darkorange;
+}
+.footer>p{
+  text-align: center;
+  margin-top: 2%;
+  font-size: larger;
+}
+
+.loading{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin: 10% 0;
+  }
+.loading ul{
+  display: flex;
+}
+.loading ul li{
+  background-color: #476a2e;
+  margin-right: 5px;
+  height: 30px;
+  width: 10px;
+  animation:  zoom .8s infinite;
+}
+@keyframes zoom {
+  0%{
+     transform: scaleY(1);
+  }
+  25%{
+     transform: scaleY(1);
+      
+  }
+  50%{
+    transform: scaleY(1);
+     
+  }
+  75%{
+    transform: scaleY(2);
+  }
+  100%{
+    transform: scaleY(3);
+    background-color: darkorange;
+     
+  }
+}
+.loading ul li:nth-child(1){
+  animation-delay: .01s;
+}
+.loading ul li:nth-child(2){
+  animation-delay: .2s;
+}
+.loading ul li:nth-child(3){
+  animation-delay: .3s;
+}
+.loading ul li:nth-child(4){
+  animation-delay: .4s;
+}
+.loading ul li:nth-child(5){
+  animation-delay: .5s;
+}
+.loading ul li:nth-child(6){
+  animation-delay: .6s;
+}
+
+
+@media screen and (max-width: 992px) {
+  .sidebar{
+    /* visibility: visible; */
+    z-index: 2;
+  }
+  nav .nav-center .links{
+    display: none;
+  }
+  .menubar{
+    display: block;
+  }
+  .head .logo h2{
+    color: green;
+  }
+  .main .contents .contents-center{
+    margin-top: 5%;
+
+    display: block;
+  }
+  .main .contents .contents-center > div{
+    width: 100%;
+  }
+  .contents-center form{
+    width: 100%;
+    margin-top: 4%;
+  }
+  .main .about-image img{
+    height: 15rem;
+  }
+  .main{
+    padding: 10% 7%;
+  }
+  .footer>div{
+    display: block;
+  }
+  .footer>div>div{
+    width: 100%;
+    margin-bottom: 5%;
   }
 }
