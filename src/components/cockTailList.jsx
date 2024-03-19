@@ -31,7 +31,7 @@ const CockTailList = () => {
                         <img src={image} alt=""/>
                         </div>
                       <div className="description">
-                          <h2>{name}</h2>
+                          <h4>{name}</h4>
                           <div className="sub">
                             <p>Category :</p> <p>{category}</p>
                           </div>

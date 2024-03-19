@@ -12,59 +12,16 @@ body {
   font-weight: 300;
   background-color: rgb(251, 245, 237);
 }
-nav{
-  align-items: center;
-  max-width: 100%;
-  height: 5rem;
-  padding: 0 7%;
-  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-}
-nav .nav-center{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-nav .nav-center .links {
-  display: flex;
-  list-style: none;
-  margin-top: 1.6rem;
-}
-nav .nav-center .links li{
-  text-transform: capitalize;
-  display: inline-block;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
-}
-nav .nav-center .links li a{
-  color: green;
-  text-decoration: none;
-}
-nav .nav-center .links li a:hover, .active{
-    border-bottom: 2px solid darkorange;
-    border-left: 2px solid darkorange;
-    border-radius: 3px;
-}
-nav .logo h2{
-  font-weight: 800;
-  margin-top: 1.5rem;
-  font-size: larger;
-  color: green;
-}
 .menubar{
-  /* visibility: hidden; */
   display: none;
 }
 .logo h2 span{
-  color: orangered;
+  color: darkorange;
 }
 .search-form{
   width: 80%;
   margin: auto;
-  background-color: rgb(245, 245, 245);
+  /* background-color: rgb(245, 245, 245); */
   padding: 30px;
   margin-top: 5%;
   border-radius: 10px;
@@ -111,6 +68,9 @@ nav .logo h2{
 .main{
   padding: 5% 7%;
 }
+.main .title h3{
+  color: #476a2e;
+} 
 .main .heading{
   display: flex;
   text-align: center;
@@ -249,17 +209,18 @@ article .description .sub{
 }
 
 article .description .sub p{
-  padding: 4px;
-  font-weight: 600;
+  padding: 2px 5px;
+  font-size:medium;
+  font-weight: 400;
 }
-article .description h2{
-  margin-bottom: 4px;
+article .description h4{
+  margin-bottom: 5px;
 }
 article .description .sub p:first-child{
-  background-color: darkorange;
+  background-color: rgb(250, 156, 41);
   border-radius: 4px;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
 }
 .cocktail-list article .description button{
@@ -372,11 +333,18 @@ main .single-center .sub{
   width: 80vw;
   height: 100%;
   padding: 5%;
+  transform: translateX(-100%);
   background: transparent;
   background-color: whitesmoke;
+  
 }
 .show{
   visibility: visible;
+}
+.show .sidebar-center{
+  transform: translateX(0%);
+  transition: transform 0.8s ease;
+
 }
 .sidebar .head{
   display: flex;
@@ -431,106 +399,9 @@ main .single-center .sub{
   border-radius: 50%;
 }
 
-/* Footer  */
-.footer{
-   width: 100%;
-   padding: 2% 7%;
-   position: relative;
-   background-color: #476a2e;
-   color: white;
-   
-}
-.footer>div{
-  display: flex;
-  justify-content: space-between;
-}
-.footer>div>div{
-  width: 23%;
 
-}
-.footer h3{
-  margin-bottom: 5px;
-}
-.footer ul li{
-  cursor: pointer;
-  font-size: large;
-}
-.footer ul li a{
-  color: white;
-  text-decoration: none;
-  
-}
-.footer ul li .active{
-  border: none;
-  text-decoration: none;
-  border-left: 3px solid darkorange;
-  border-radius: none;
-  padding-left: 3px;
-}
-.footer ul li span :first-child{
-  color: darkorange;
-}
-.footer>p{
-  text-align: center;
-  margin-top: 2%;
-  font-size: larger;
-}
 
-.loading{
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   margin: 10% 0;
-  }
-.loading ul{
-  display: flex;
-}
-.loading ul li{
-  background-color: #476a2e;
-  margin-right: 5px;
-  height: 30px;
-  width: 10px;
-  animation:  zoom .8s infinite;
-}
-@keyframes zoom {
-  0%{
-     transform: scaleY(1);
-  }
-  25%{
-     transform: scaleY(1);
-      
-  }
-  50%{
-    transform: scaleY(1);
-     
-  }
-  75%{
-    transform: scaleY(2);
-  }
-  100%{
-    transform: scaleY(3);
-    background-color: darkorange;
-     
-  }
-}
-.loading ul li:nth-child(1){
-  animation-delay: .01s;
-}
-.loading ul li:nth-child(2){
-  animation-delay: .2s;
-}
-.loading ul li:nth-child(3){
-  animation-delay: .3s;
-}
-.loading ul li:nth-child(4){
-  animation-delay: .4s;
-}
-.loading ul li:nth-child(5){
-  animation-delay: .5s;
-}
-.loading ul li:nth-child(6){
-  animation-delay: .6s;
-}
+
 
 
 @media screen and (max-width: 992px) {

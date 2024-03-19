@@ -23,13 +23,12 @@ const SingleCockTail = () => {
                     strDrinkThumb : image, 
                     strDrink : name,
                     strInstructions : instructions,
-                    strIngredient1 : ingredient1,
-                    strIngredient2 : ingredient2,
-                    strIngredient3 : ingredient3,
-                    strIngredient4 : ingredient4,
+                    strIngredient1,
+                    strIngredient2 ,
+                    strIngredient3 
                 } =data.drinks[0]
     
-                const ingredients = [ingredient1, ingredient2, ingredient3, ingredient4]
+                const ingredients = [strIngredient1, strIngredient2, strIngredient3]
                 .filter(ingredients => ingredients)
                 const newSingleCockTail = {name, glass, image, category, instructions, ingredients}
                 console.log(newSingleCockTail);

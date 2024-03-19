@@ -46,7 +46,7 @@ const Footer = () => {
                 <ul>
                     <li>
                         <span><MdOutlineMail /></span> 
-                        <span><a href="">olugodwin@gmail.com</a></span>
+                        <span>olugodwin@gmail.com</span>
                     </li>
 
                     <li>

@@ -1,5 +1,8 @@
 import Home from './pages/home';
 import { Routes, Route } from 'react-router-dom';
+import './styles/navbar.css'
+import './styles/footer.css'
+import './styles/loader.css'
 import './App.css'
 import Navbar from './components/navbar';
 import About from './pages/about';
