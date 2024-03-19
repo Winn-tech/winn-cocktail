@@ -52,13 +52,12 @@ const SingleCockTail = () => {
             <h3>Loading ...</h3>
         )
     }
-    // if(singleCockTail === null){
-    //     <h3>You just hit a dead end</h3>
-    // }
+    
 
     const {name, glass, image, category, instructions,ingredients} =singleCockTail
     console.log(ingredients);
     return ( 
+        
         
     <main className='single'>
         <h3>{name}</h3>
