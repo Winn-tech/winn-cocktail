@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useGlobalContext } from '../components/context';
+import SideBar from '../components/sideBar';
 const singleCockTailURL = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
 
 const SingleCockTail = () => {
@@ -30,18 +31,25 @@ const SingleCockTail = () => {
     
                 const ingredients = [strIngredient1, strIngredient2, strIngredient3]
                 .filter(ingredients => ingredients)
-                const newSingleCockTail = {name, glass, image, category, instructions, ingredients}
+                const newSingleCockTail = {
+                    name, 
+                    glass, 
+                    image, 
+                    category, 
+                    instructions, 
+                    // ingredients
+                }
                 console.log(newSingleCockTail);
                 setSingleCockTail(newSingleCockTail);
                 setIsLoading(false)
                } else {
-                
+                setSingleCockTail({})
                }
             } catch (error) {
-                setSingleCockTail({})
+                // setSingleCockTail({})
                 setIsLoading(false)
             }
-        }
+        }    
         fetchSingleCockTail()
     
     },[id])
@@ -49,7 +57,7 @@ const SingleCockTail = () => {
     
     if(isLoading){
         return(
-            <h3>Loading ...</h3>
+           <Loading/>
         )
     }
     
@@ -57,9 +65,10 @@ const SingleCockTail = () => {
     const {name, glass, image, category, instructions,ingredients} =singleCockTail
     console.log(ingredients);
     return ( 
-        
+
         
     <main className='single'>
+        <SideBar/>
         <h3>{name}</h3>
         <div className="single-center">
             <div className="image">
@@ -78,10 +87,17 @@ const SingleCockTail = () => {
                     <span>instructions:</span>
                     <span>{instructions}</span>
                 </div>
-                <div>{ingredients.map((item, index)=>{
-                     console.log(`Ingredient ${index}:`, item);
+                {/* <div>{ingredients.map((item, index)=>{
+                    //  console.log(`Ingredient ${index}:`, item);
                      return item ? <span key={index}> {item}</span> : null
-                })}</div>
+                })}</div> */}
+                <div>
+                    {ingredients? ingredients.map((item, index)=>{
+                        return (
+                            <span key={index}>item</span>
+                        )
+                    }): null}
+                </div>
             </div>
         </div>
         <div className='home-btn'>
