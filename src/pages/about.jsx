@@ -28,7 +28,7 @@ const About = () => {
                                 shared love for unique flavors, creativity in mixology, and the desire to bring the world of cocktails closer to enthusiasts like you.
                             </p>
                             <p>
-                                <h4>Who we are:</h4>
+                                <span>Who we are:</span>
                                 Winn-cocktail is a curated space where cocktail aficionados, both seasoned mixologists and enthusiastic beginners, come together to explore, learn, and elevate their cocktail experiences. Our team is composed of dedicated individuals who share a common goal – to inspire and empower
                                 you to create memorable moments through the art of cocktail making.
                             </p>

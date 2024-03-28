@@ -19,23 +19,29 @@ const Footer = () => {
              <div>
                 <h3>Top Courses</h3>
                 <ul>
-                    <li>Mixology Basics</li>
-                    <li>Spirit Spotlight</li>
-                    <li>Cocktail Recipes & Techniques</li>
+                    <li>
+                        <NavLink  to={"/training"} className='top-courses' >Mixology Basics</NavLink>
+                    </li>
+                    <li>
+                        <NavLink  to={"/training"} className='top-courses' >Spirit Spotlight</NavLink>  
+                    </li>
+                    <li>
+                        <NavLink  to={"/training"} className='top-courses' >Cocktail Recipes & Techniques</NavLink> 
+                    </li>
                 </ul>
              </div>
 
              <div>
                 <h3>Pages</h3>
-                <ul onClick={scrollToTop}>
+                <ul onClick={scrollToTop} >
                 <li>
-                    <NavLink to={"/"} activeClassName="active" className='a'>Home</NavLink>
+                    <NavLink  to={"/"} activeClassName="active" className='a'>Home</NavLink>
                   </li>
                   <li>
-                    <NavLink to={"/about"}>About</NavLink>
+                    <NavLink  to={"/about"} className='a'>About</NavLink>
                   </li>
                   <li>
-                    <NavLink to={"/training"}>Training</NavLink>
+                    <NavLink  to={"/training"} className='a' >Training</NavLink>
                   </li>
                 </ul>
 
@@ -46,7 +52,7 @@ const Footer = () => {
                 <ul>
                     <li>
                         <span><MdOutlineMail /></span> 
-                        <span>olugodwin@gmail.com</span>
+                        <span>Olugodwin@gmail.com</span>
                     </li>
 
                     <li>
@@ -63,9 +69,9 @@ const Footer = () => {
            
              
        </div>
-        <p>Developed by Winn 2024</p>
+        <p>Developed by Winn &copy; 2024</p>
     </div>
      );
 }
  
-export default Footer;
+export default Footer; 

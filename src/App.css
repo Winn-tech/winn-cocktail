@@ -91,6 +91,8 @@ body {
     border-radius: 5px;
 }
 .main .contents{
+  font-size: large;
+  font-weight: 400;
   margin-top: 4%;
 }
 .main .contents .contents-center{
@@ -103,7 +105,10 @@ body {
   list-style: none;
 }
 .main .contents h4{
-  margin: 0.5% 0;
+  margin: 3% 0;
+  color: darkorange;
+}
+.main .contents h5{
   color: darkorange;
 }
 .main .contents .abt-sct{
@@ -121,6 +126,13 @@ body {
 }
 .main .contents .contents-center .texts p{
   margin: 3% 0;
+}
+.main .contents .contents-center .texts p span{
+  color: darkorange;
+  display: block;
+  font-size: large;
+  font-weight: 500;
+  margin: 5px 0;
 }
 
 .contents-center .training-form{
@@ -241,7 +253,7 @@ article .description .sub p:first-child{
   border-color: aliceblue;
 }
 
-.single{
+/* .single{
   display: block;
   box-shadow:2px 5px 3px 0px rgba(0, 0, 0, 0.5) ;
   width: fit-content;
@@ -291,8 +303,51 @@ main .single-center .sub span:first-child{
 
 main .single-center .sub{
   margin-bottom: 1rem;
+} */
+.single{
+  display: block;
+  box-shadow:2px 5px 3px 0px rgba(0, 0, 0, 0.5) ;
+  width: 80vw;
+  margin: auto; 
+  background-color: whitesmoke;
+  padding: 1rem 3rem;
+  margin-top: 5%;
 }
-
+.single h3{
+  text-align: center;
+  margin-bottom: 0.5rem;
+ }
+ 
+ .single .home-btn{
+   display: flex;
+   justify-content: center;
+ }
+ 
+ .single .home-btn button{
+   padding: 5px 10px;
+   border-radius: 4px;
+   color: white;
+   background-color: #476a2e;
+   cursor: pointer;
+ }
+ 
+  .single-center .image img{
+    height: 20rem;
+    border-radius: 10px;
+ }
+ 
+ .single-center .sub span:first-child{
+   background-color: darkorange;
+   margin-right: 10px;
+   border-radius: 4px;
+   text-transform: capitalize;
+   font-weight: 600;
+   padding: 4px;
+   color: white;
+ }
+ .single-center .sub{
+  margin-bottom: 1rem;
+}
 @media screen and (min-width: 900px) {
   .cocktail-list{
     display: grid;
@@ -397,6 +452,12 @@ main .single-center .sub{
 
     display: block;
   }
+  .main .contents h4{
+    margin: 2% 0;
+    margin-top: 20px;
+    color: darkorange;
+    
+  }
   .main .contents .contents-center > div{
     width: 100%;
   }
@@ -417,4 +478,17 @@ main .single-center .sub{
     width: 100%;
     margin-bottom: 5%;
   }
+ 
+  
+}
+@media screen and (max-width: 600px){
+  .single-center .image img{
+    
+    height: 15rem;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 10px auto;
+    margin-bottom: 15px;
+    
+ }
 }

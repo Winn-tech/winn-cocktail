@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useGlobalContext } from '../components/context';
 import SideBar from '../components/sideBar';
+import Loading from '../components/loading';
 const singleCockTailURL = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
 
 const SingleCockTail = () => {
@@ -67,8 +68,9 @@ const SingleCockTail = () => {
     return ( 
 
         
-    <main className='single'>
+    <>
         <SideBar/>
+        <div className="single">
         <h3>{name}</h3>
         <div className="single-center">
             <div className="image">
@@ -105,7 +107,8 @@ const SingleCockTail = () => {
                 <button>Back</button>
             </Link>
         </div>
-    </main> );
+        </div>
+    </> );
 }
 
  
