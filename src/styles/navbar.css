@@ -41,3 +41,8 @@ nav{
     font-size: larger;
     color: green;
   }
+  .menubar{
+    min-height: 3.2rem;
+    width: 30px;
+    margin-top: 10px;
+  }

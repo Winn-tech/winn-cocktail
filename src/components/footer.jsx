@@ -18,7 +18,7 @@ const Footer = () => {
              </div>
              <div>
                 <h3>Top Courses</h3>
-                <ul>
+                <ul  onClick={scrollToTop}>
                     <li>
                         <NavLink  to={"/training"} className='top-courses' >Mixology Basics</NavLink>
                     </li>
